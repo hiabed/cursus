@@ -6,7 +6,7 @@
 /*   By: mhassani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 20:06:12 by mhassani          #+#    #+#             */
-/*   Updated: 2022/10/23 17:15:41 by mhassani         ###   ########.fr       */
+/*   Updated: 2022/11/06 17:40:50 by mhassani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ft_strlen(s) || len <= 0)
 		return (ft_strdup(""));
-	if (len > ft_strlen(s) - start)
+	if (len > (ft_strlen(s) - start))
 		len = ft_strlen(s) - start;
 	substr = (char *)malloc(len + 1);
 	if (!substr)
@@ -45,7 +45,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // {
 // 	char *s1 = "Helloworld";
 
-// 	printf("the substr is: %s\n", ft_substr(s1, 0, 1));
+// 	printf("the substr is: %s\n", ft_substr(s1, 5, 12));
 
 // 	return (0);
 // }

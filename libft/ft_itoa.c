@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhassani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 20:08:24 by mhassani          #+#    #+#             */
-/*   Updated: 2022/10/26 22:05:23 by mhassani         ###   ########.fr       */
+/*   Created: 2022/11/06 17:36:34 by mhassani          #+#    #+#             */
+/*   Updated: 2022/11/06 17:36:37 by mhassani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	len_of_n(long nb)
+static int	len_of_n(int nb)
 {
 	int	len;
 
@@ -45,10 +45,11 @@ char	*ft_itoa(int n)
 		return (NULL);
 	str[len] = '\0';
 	if (n < 0)
+	{
+		n = n * -1;
 		str[0] = '-';
+	}
 	len--;
-	if (n < 0)
-		n *= -1;
 	while (n > 0)
 	{
 		str[len] = (n % 10) + '0';

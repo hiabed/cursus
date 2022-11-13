@@ -5,15 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhassani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 10:16:42 by mhassani          #+#    #+#             */
-/*   Updated: 2022/10/21 12:54:17 by mhassani         ###   ########.fr       */
+/*   Created: 2022/11/06 17:37:35 by mhassani          #+#    #+#             */
+/*   Updated: 2022/11/06 17:37:42 by mhassani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-//slightly different from memcpy;
-//need to update;
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -38,7 +35,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // {
 //     char src[] = "abcdefghijkl";
 
-//     memmove(src + 2, src, 10 * sizeof(char));
+//     ft_memmove(src + 2, src, 10 * sizeof(char));
 
 //  	printf("%s\n", src + 2);
 

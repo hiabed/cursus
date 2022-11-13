@@ -6,7 +6,7 @@
 /*   By: mhassani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 18:14:51 by mhassani          #+#    #+#             */
-/*   Updated: 2022/10/24 14:09:25 by mhassani         ###   ########.fr       */
+/*   Updated: 2022/11/06 17:39:37 by mhassani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!newstr)
 		return (NULL);
 	i = 0;
-	while (s1[i] != '\0')
+	while (s1[i])
 	{
 		newstr[i] = s1[i];
 		i++;
 	}
 	j = 0;
-	while (s2[j] != '\0')
+	while (s2[j])
 	{
 		newstr[i] = s2[j];
 		i++;
