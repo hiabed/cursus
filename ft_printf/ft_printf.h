@@ -15,9 +15,7 @@
 
 # include <stdarg.h>
 # include <stdio.h>
-# include <string.h>
 # include <unistd.h>
-# include <limits.h>
 
 int	ft_printf(const char *s, ...);
 int	print_pointer(unsigned long n);

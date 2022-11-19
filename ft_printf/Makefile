@@ -23,7 +23,7 @@ CFILES = ft_printf.c\
 OBJ = ${CFILES:.c=.o}
 CFLAGS = -Wall -Wextra -Werror
 CC = cc
-LI = ar -r
+LI = ar -rc
 HEAD = ft_printf.h
 
 all : ${NAME}
