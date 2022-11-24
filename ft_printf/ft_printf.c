@@ -12,26 +12,26 @@
 
 #include "ft_printf.h"
 
-int	ft_check(char format, va_list args)
+int	ft_check(char format, va_list ar)
 {
 	int	i;
 
 	if (format == 'c')
-		i = ft_putchar(va_arg(args, int));
+		i = ft_putchar(va_arg(ar, int));
 	else if (format == '%')
 		i = ft_putchar('%');
 	else if (format == 's')
-		i = ft_putstr(va_arg(args, char *));
+		i = ft_putstr(va_arg(ar, char *));
 	else if (format == 'p')
-		i = print_pointer(va_arg(args, unsigned long));
+		i = print_pointer(va_arg(ar, unsigned long));
 	else if (format == 'd' || format == 'i')
-		i = ft_putnbr(va_arg(args, int));
+		i = ft_putnbr(va_arg(ar, int));
 	else if (format == 'u')
-		i = print_uns_num(va_arg(args, unsigned int));
+		i = print_uns_num(va_arg(ar, unsigned int));
 	else if (format == 'x')
-		i = ntohex(va_arg(args, unsigned int));
+		i = ntohex(va_arg(ar, unsigned int));
 	else if (format == 'X')
-		i = ntohex_up(va_arg(args, unsigned int));
+		i = ntohex_up(va_arg(ar, unsigned int));
 	else
 		i = ft_putchar(format);
 	return (i);
