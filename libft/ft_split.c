@@ -33,7 +33,7 @@ static int	num_words(char const *s, char c)
 	return (n);
 }
 
-static int	word_len(char const *s, char c, int i) "HELLO WORLD "
+static int	word_len(char const *s, char c, int i)
 {
 	int	wc;
 

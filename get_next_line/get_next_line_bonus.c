@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 void	ft_free(char *s1, char *s2)
 {
@@ -100,17 +100,17 @@ char	*read_line(int fd, int i, char *s)
 
 char	*get_next_line(int fd)
 {
-	static char	*stat;
+	static char	*stat[OPEN_MAX];
 	char		*str;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	stat = read_line(fd, 1, stat);
-	if (!stat)
+	stat[fd] = read_line(fd, 1, stat[fd]);
+	if (!stat[fd])
 		return (NULL);
-	str = first_line(stat);
+	str = first_line(stat[fd]);
 	if (!str)
 		return (NULL);
-	stat = left_str(stat);
+	stat[fd] = left_str(stat[fd]);
 	return (str);
 }
