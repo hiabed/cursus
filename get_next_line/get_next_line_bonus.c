@@ -87,9 +87,8 @@ char	*read_line(int fd, int i, char *s)
 		}
 		if (i == 0 && (!s || !s[i]))
 		{
-			free(s);
-			s = NULL;
-			break ;
+			ft_free(s, buffer);
+			return (NULL);
 		}
 		buffer[i] = '\0';
 		s = ft_strjoin(s, buffer);
