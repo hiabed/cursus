@@ -66,7 +66,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	int		j;
 
 	if (!s1)
-		s1 = calloc(1, 1);
+		s1 = ft_calloc(1, 1);
 	if (!s2)
 		return (NULL);
 	newstr = malloc((ft_strlen(s1) + ft_strlen(s2) + 1));

@@ -18,7 +18,7 @@ void	ft_free(char *s1, char *s2)
 	free(s2);
 }
 
-char	*first_line(char *s)
+char	*line(char *s)
 {
 	int		i;
 	char	*line;
@@ -85,7 +85,7 @@ char	*read_line(int fd, int i, char *s)
 			ft_free(s, buffer);
 			return (NULL);
 		}
-		if (i == 0 && (!s || !s[i]))
+		if (i == 0 && (!s || !s[0]))
 		{
 			ft_free(s, buffer);
 			return (NULL);
@@ -107,7 +107,7 @@ char	*get_next_line(int fd)
 	stat = read_line(fd, 1, stat);
 	if (!stat)
 		return (NULL);
-	str = first_line(stat);
+	str = line(stat);
 	if (!str)
 		return (NULL);
 	stat = left_str(stat);
